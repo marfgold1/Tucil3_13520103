@@ -14,7 +14,7 @@ Merupakan project menggunakan bahasa pemrograman Python untuk membuat algoritma 
 _Fifteen Puzzle_ merupakan permainan menyusun puzzle 15 block dalam 16 buah tile, dimana pemain hanya boleh untuk menggeser block yang tersedia melalui tile kosong. Pustaka ini merupakan program implementasi penyelesaian puzzle tersebut menggunakan strategi _branch and bound_. Pustaka ini juga dilengkapi visualisasi yang dapat digunakan dalam menampilkan pergeseran secara interaktif.
 
 ## Requirement
-1. Python >= 3.8 + tkinter (optional, untuk GUI)
+1. Python >= 3.7 + tkinter (optional, untuk GUI)
 
 ## Setup
 > Program ini memerlukan tkinter untuk menjalankan GUI. Install tkinter [disini](https://tkdocs.com/tutorial/install.html).
@@ -49,7 +49,7 @@ Beberapa sample program yang dapat digunakan sebagai referensi:
 2. Menyelesaikan instansi persoalan fifteen puzzle dari file.
     ```py
     from FifteenPuzzleSolver.solver import Solver
-    with open("test/test.txt", "r") as f:
+    with open("test/berhasil1.txt", "r") as f:
         print(Solver(f.read()))
     ```
 3. Menampilkan GUI dari solver.

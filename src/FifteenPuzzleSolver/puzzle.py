@@ -46,6 +46,14 @@ class Puzzle:
             self.swap(last_center, self.__center)
         self.cost = self.depth + self.__h()
         """The cost of this puzzle node."""
+        self.key = hash("|".join([
+            "|".join([
+                str(y)
+                for y in x
+            ])
+            for x in self.map_
+        ]))
+        """The key unique id for this puzzle node."""
 
     def __h(self) -> int:
         """Get the heuristic cost approximation of this node.

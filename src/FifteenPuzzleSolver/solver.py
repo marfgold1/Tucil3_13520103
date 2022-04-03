@@ -48,9 +48,8 @@ class Solver:
         self.reset()
         self.root = Puzzle(self, self.map)
         self.calc_kurang = [
-            self.kurang(i*4+j+1)
-            for j in range(4)
-            for i in range(4)
+            self.kurang(i+1)
+            for i in range(16)
         ]
         self.solve()
 
@@ -85,11 +84,10 @@ class Solver:
         Returns:
             bool: is puzzle already visited.
         """
-        s = str(puzzle)
-        if s in self.__visited:
+        if puzzle.key in self.__visited:
             return True
         else:
-            self.__visited[s] = True
+            self.__visited[puzzle.key] = True
             return False
 
     def reset(self):
